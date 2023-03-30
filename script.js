@@ -9,41 +9,28 @@ let todo = [];
 
 
 function add() {
-    todo.push(inp.value);
-    inp.value = '';
 
-    let data = '';
+    if (inp.value == "") {
+        alert('Spaces cannot be added!')
+    }
+    else {
+        todo.push(inp.value);
+        inp.value = '';
+        let data = '';
 
-    for (let item of todo) {
-
-        if(item == ''){
-            data == null
-            alert('Spaces cannot be added!')
-        }
-        else{
+        for (let item of todo) {
+    
             data += `<li class="list-group-item"> ${item} </li>`
+            
         }
-
-
-
-
-        // if (item == '') {
-
-        //     data == null
-        //     alert('Spaces cannot be added!')
-
-        // }
-
-        // else {
-        //     data += `<li class="list-group-item"> ${item} </li>`
-
-        // }
-
-
+    
+    
+        list.innerHTML = data;
     }
 
 
-    list.innerHTML = data;
+
+   
 
 
 
